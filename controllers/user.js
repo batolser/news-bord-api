@@ -25,6 +25,7 @@ module.exports.signUp = (req, res, next) => {
 module.exports.singIn = (req, res, next) => {
   const { email, password } = req.body;
   let user;
+  const { name } = user;
   User.findOne({ email }).select('+password')
     .then((u) => {
       user = u;
@@ -46,7 +47,7 @@ module.exports.singIn = (req, res, next) => {
         httpOnly: true,
         sameSite: 'none',
       });
-      return res.send({ token, name, email });
+      return res.send({ token, name });
     })
     .catch(next);
 };
