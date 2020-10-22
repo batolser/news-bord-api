@@ -47,7 +47,7 @@ module.exports.singIn = (req, res, next) => {
         httpOnly: true,
         sameSite: 'none',
       });
-      return res.send({ token, name });
+      return res.send({ token });
     })
     .catch(next);
 };
