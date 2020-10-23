@@ -25,7 +25,6 @@ module.exports.signUp = (req, res, next) => {
 module.exports.singIn = (req, res, next) => {
   const { email, password } = req.body;
   let user;
-  const { name } = user;
   User.findOne({ email }).select('+password')
     .then((u) => {
       user = u;
