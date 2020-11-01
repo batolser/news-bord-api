@@ -10,7 +10,7 @@ const auth = require('../middlewares/auth');
 
 
 articleRouter.get('/articles', celebrate(validationCookies), auth, getArticles);
-articleRouter.post('/articles', celebrate(validationCookies), celebrate(validationCreateArticle), auth, createArticle);
+articleRouter.post('/articles', celebrate(validationCreateArticle), auth, createArticle);
 articleRouter.delete('/articles/:articleId', celebrate(validationCookies), celebrate(validationDeleteArticle), auth, getArticleMiddleware, deleteArticle);
 
 module.exports = articleRouter;

@@ -41,12 +41,7 @@ module.exports.singIn = (req, res, next) => {
       return jwt.sign({ _id: user._id }, JWT_SECRET, { expiresIn: '7d' });
     })
     .then((token) => {
-      res.cookie('jwt', token, {
-        maxAge: 3600000 * 24 * 7,
-        httpOnly: true,
-        sameSite: 'none',
-      });
-      return res.send({ token });
+      return res.send({ name: user.name, token: token });
     })
     .catch(next);
 };

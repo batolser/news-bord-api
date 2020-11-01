@@ -6,7 +6,7 @@ const axios=require("axios");
 
 const bodyParser = require('body-parser');
 
-const cookieParser = require('cookie-parser');
+// const cookieParser = require('cookie-parser');
 const { errors } = require('celebrate');
 const { errorHandler } = require('./middlewares/errorHandler');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
@@ -14,7 +14,7 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 const app = express();
 const { PORT, DB } = require('./config');
 
-let whitelist = ['http://localhost:8080', 'https://api.news-bord.students.nomoreparties.co', 'http://api.news-bord.students.nomoreparties.co', 'mongodb://localhost:27017/news-bord_db'];
+let whitelist = ['http://localhost:8080', 'https://api.news-bord.students.nomoreparties.co', 'http://api.news-bord.students.nomoreparties.co', 'https://news-bord.students.nomoreparties.co', 'http://news-bord.students.nomoreparties.co','mongodb://localhost:27017/news-bord_db'];
 
 const corsOptions = {
   origin: function (origin, callback) {
@@ -30,7 +30,7 @@ const corsOptions = {
 
 const router = require('./routes/index');
 
-app.use(cookieParser());
+// app.use(cookieParser());
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
