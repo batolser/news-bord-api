@@ -14,7 +14,7 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 const app = express();
 const { PORT, DB } = require('./config');
 
-let whitelist = ['http://localhost:8080', 'https://api.news-bord.students.nomoreparties.co', 'http://api.news-bord.students.nomoreparties.co', 'https://news-bord.students.nomoreparties.co', 'http://news-bord.students.nomoreparties.co','mongodb://localhost:27017/news-bord_db'];
+let whitelist = ['http://localhost:8080', 'https://www.api.news-bord.students.nomoreparties.co','https://api.news-bord.students.nomoreparties.co', 'http://api.news-bord.students.nomoreparties.co', 'https://news-bord.students.nomoreparties.co', 'http://news-bord.students.nomoreparties.co','mongodb://localhost:27017/news-bord_db'];
 
 const corsOptions = {
   origin: function (origin, callback) {
