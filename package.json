@@ -1,0 +1,41 @@
+{
+  "name": "news-bord-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/batolser/news-bord-api.git"
+  },
+  "author": "Baturova Olga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/batolser/news-bord-api/issues"
+  },
+  "homepage": "https://github.com/batolser/news-bord-api#readme",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "celebrate": "^12.1.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-winston": "^4.0.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.16",
+    "validator": "^13.0.0",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.1.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  }
+}
